@@ -22,7 +22,7 @@ jobs:
             - name: Install Playwright Browsers
               run: npx playwright install --with-deps
             - name: Run Playwright tests
-              run: npx playwright test --config=config/test.playwright.config.ts --grep "@endtoend" --headed
+              run: npx playwright test --config=config/test.playwright.config.ts --grep "@makeAppoinmentEnvTest" --headed
             - uses: actions/upload-artifact@v4
               if: ${{ !cancelled() }}
               with:
